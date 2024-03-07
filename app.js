@@ -4,6 +4,7 @@ var physics = document.querySelector("#third")
 var math = document.querySelector("#fourth")
 var bio = document.querySelector("#fifth")
 var islamiyat = document.querySelector("#sixth")
+var total = document.querySelector("#total")
 var studendGain = document.querySelector("#obtained")
 var percentage = document.querySelector("#percent")
 var grade = document.querySelector("#rank")
@@ -19,35 +20,41 @@ function calculator() {
     var totalMarks =(600)
     console.log(totalMarks);
 
+    total.innerHTML=("TOTAL-MARKS " + "=" + totalMarks ) 
+
     var obtainedMarks =(+english.value + +chemistry.value + +physics.value + +math.value + +bio.value + +islamiyat.value) 
     console.log(obtainedMarks);
 
     studendGain.innerHTML=("OBTAINED-MARKS " + "= " + obtainedMarks)
 
-    studentPercentage=("PERCENTAGE " + "= " + obtainedMarks/totalMarks*100)
+    var student =(obtainedMarks/totalMarks*100)
+
+    studentPercentage=("PERCENTAGE " + "= " + student + "%")
     
     percentage.innerHTML=studentPercentage
 
     console.log(studentPercentage);
 
-    if (studentPercentage>=50 && studentPercentage<=60) {
+    if (student>=50 && student<=60) {
         grade.innerHTML=("GRADE" + "= " + "C" )
     } 
     
-    else if (studentPercentage>=61 && studentPercentage<=70)
+    else if (student>=61 && student<=70)
     grade.innerHTML=("GRADE" + "= " + "B" )
 
-    else if (studentPercentage>=71 && studentPercentage<=80)
+    else if (student>=71 && student<=80)
     grade.innerHTML=("GRADE" + "= " + "A" )
 
-    else if (studentPercentage>=81 && studentPercentage<=90)
+    else if (student>=81 && student<=90)
     grade.innerHTML=("GRADE" + "= " + "A-1" )
 
-    else if (studentPercentage>=91 && studentPercentage<=98)
+    else if (student>=91 && student<=98)
     grade.innerHTML=("GRADE" + "= " + "A+" )
 
-    else {grade.innerHTML=("YOU ENTERED WRONG SUBJECT MARKS")        
+    else {grade.innerHTML=("FAIL")        
     }
-
-
+   
+    console.log(grade.innerHTML);
 }
+
+
