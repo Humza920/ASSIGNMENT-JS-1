@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>JS-WORK</title>
+    <title>RESULT</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+    <div class="Container">
+        <div class="content">
+            <div class="top"><h1>PERCENTAGE 
+                <span>(CALCULATOR)</span></h1>
+            </div>
+            <form>
+               <div class="form-container">
+                <div class="form-control">
+                    <label for="first">ENGLISH</label>
+                    <input type="number" name="first" id="first" placeholder="Enter Marks"value="" >
+                </div>
+                <div class="form-control">
+                    <label for="second">CHEMISTRY</label>
+                    <input type="number" name="second" id="second" placeholder="Enter Marks"value="">
+                </div>
+                <div class="form-control">
+                    <label for="third">PHYSICS</label>
+                    <input type="number" name="third" id="third" placeholder="Enter Marks"value="">
+                </div>
+                <div class="form-control">
+                    <label for="fourth">MATHEMATICS</label>
+                    <input type="number" name="fourth" id="fourth" placeholder="Enter Marks"value="">
+                </div> 
+                <div class="form-control">
+                    <label for="fifth">BIOLOGY</label>
+                     <input type="number" name="fifth" id="fifth" placeholder="Enter Marks"value=""> 
+                </div>
+                <div class="form-control">
+                    <label for="sixth">ISLAMIYAT</label>
+                    <input type="number" id="sixth" name="sixth" placeholder="Enter Marks"value="">
+                </div>  
+                </div> 
+            </form>
+                <div class="but">
+                <button type="submit" onclick="calculator()">CHECK RESULT</button>
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="result">
+        <h1 id="obtained">OBTAINED-MARKS =</h1>
+        <h1 id="percent">PERCENTAGE =</h1>
+        <h1 id="rank">GRADE =</h1>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
